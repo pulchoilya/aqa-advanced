@@ -25,8 +25,8 @@ for (let i = 0; i < numbers.length; i++) {
         zeroCount++;
     }
 }
-console.log("Положительные числа:", positiveCount);
-console.log("Отрицательные числа:", negativeCount);
+console.log("Кількість позитивних чисел:", positiveCount);
+console.log("Кількість негативних чисел:", negativeCount);
 console.log("Кількість нульових чисел:", zeroCount);
 
 const numbers1 = [2, -5, 0, 7, -3, 0, 10, -8];
@@ -45,7 +45,7 @@ for (const num of numbers1) {
     }
 }
 
-console.log("Положительные числа:",positiveCount2, "Отрицательные числа:",negativeCount2,"Кількість нульових чисел:", zeroCount2);
+console.log("Кількість позитивних чисел:",positiveCount2, "Кількість негативних чисел:",negativeCount2,"Кількість нульових чисел:", zeroCount2);
 
 const numbers3 = [2, -5, 0, 7, -3, 0, 10, -8];
 
