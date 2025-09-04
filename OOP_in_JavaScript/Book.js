@@ -33,16 +33,9 @@ export class Book {
     }
 
     static findOldest(books) {
-        let oldestBook = books[0];
-        for (let i = 1; i < books.length; i++) {
-            if (books[i].year < oldestBook.year) {
-                oldestBook = books[i];
-            }
-        }
-        return oldestBook;
+        return books.slice().sort((a, b) => a.year - b.year)[0];
     }
 }
-
 
 const book1 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
 const book2 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);

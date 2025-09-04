@@ -41,9 +41,21 @@ static fromBook(bookMethod, format) {
 }
 
 
-const ebook1 = new  EBook("To Kill a Mockingbird", "Harper Lee", 1960, "electronic book");
-const ebook2 = new EBook("The Great Gatsby", "F. Scott Fitzgerald", 1925, "PDF");
-const ebook3 = new EBook("Harry Potter and the Philosopher’s Stone", "J.K. Rowling", 1997, "ePub");
+// create books
+const book1 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+const book2 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+const book3 = new Book("Harry Potter and the Philosopher’s Stone", "J.K. Rowling", 1997);
+const book4 = new Book("1984", "George Orwell", 1949);
+
+console.log("\n");
+
+// EBook from fromBook
+const ebook1 = EBook.fromBook(book1, "electronic book");
+const ebook2 = EBook.fromBook(book2, "PDF");
+const ebook3 = EBook.fromBook(book3, "ePub");
+const ebook4 = EBook.fromBook(book4, "MOBI");
+
+console.log("\n");
 
 ebook1.printInfo();
 ebook2.printInfo();
@@ -51,10 +63,11 @@ ebook3.printInfo();
 
 console.log("\n");
 
-const ebook4 = new EBook("1984", "George Orwell", 1949, "PDF");
+// ebook4
 ebook4.printInfo();
-ebook4.format = "WORD";   // Format  is invalid
-ebook4.name = "Brave New World";  // 3 words, no warning
-ebook4.year = 1500;  // The book of 20th century
+ebook4.format = "WORD";
+ebook4.name = "Brave New World";
+ebook4.year = 1500;
 ebook4.author = "Jack";
 ebook4.printInfo();
+
