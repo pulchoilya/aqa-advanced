@@ -64,10 +64,13 @@ Promise.all([getTodo(), getUser()])
 Promise.race([getTodo(), getUser()])
     .then(result => {
         firstFinished = result;
-        console.log("First completed promise::", result);
-        console.log("\n");
+        processResult(firstFinished);
     })
     .catch(error => {
         console.error("Error:", error);
     });
+
+function processResult(data) {
+    console.log("Processing:", data);
+}
 
