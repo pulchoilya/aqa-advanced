@@ -8,17 +8,20 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     ignores: [
       "node_modules/**",
-      ".history/**",
-      "dist/**",
       "build/**",
       "coverage/**",
+      ".history/**",
       "*.log",
       "*.tmp"
     ],
     plugins: { js },
     extends: ["js/recommended"],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: { 
+        ...globals.browser, 
+        ...globals.node,
+        ...globals.jest   
+      },
     },
   },
   tseslint.configs.recommended
